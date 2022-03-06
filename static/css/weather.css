@@ -1,70 +1,152 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-html{
-  line-height: 1.5;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
 body {
- 
-  /* font-family: 'Open Sans', sans-serif; */
-  font-family: 'Playfair Display', serif;
+    margin: 0px;
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  
-  /* padding-top: 5px;
-  padding-bottom: 5px; */
-  opacity: 0.85;
-  background-size:cover;   
-  background-repeat: no-repeat;
-  background-position: center;
+.grid-container {
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 8px;
+    grid-template-rows: auto;
+    align-content: center;
+    background-image: url("https://besthqwallpapers.com/Temp/6-3-2022/crumpled-paper-texture-white-crumpled-paper-background-paper-texture-white-paper-crumpled-paper-besthqwallpapers.com-1024x768.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.midb {
-    padding: 25px;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    text-align: left;
-    margin: 0 auto;
+.grid-item {
+    padding: 8px;
 }
 
-.form-signin {
-  width: 50%;
-  margin: 0 auto;
+p.para {
+    font-size: 18px;
+    line-height: 12px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#grid-1 {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+#grid-2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+#heading-2 {
+    font-size: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#heading-1 {
+    font-weight: lighter;
+}
+
+a#arogya-link {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+a#login {
+    text-decoration: none;
+}
+
+img#map {
+    width: 300px;
+    height: 200px;
+}
+
+.container {
+    background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70)%22");
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    height: 300px;
+    opacity: 0.95;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    /*background-position: center;*/
+}
+
+.grid {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-column-gap: 8px;
+    font-family: 'Playfair Display', serif;
 }
 
 .text-dark {
-  color: #150349!important;
+    color: black!important;
+    font-family: 'Lora', serif;
+    font-weight: lighter;
 }
-/* .text-center{
-  height: 300px;
-} */
+
+h1.text-dark {
+    font-size: 45px;
+}
+
 input[type='text'] {
-    width: 100%;
+    width: 60%;
     background-color: white;
     opacity: 0.85;
     padding: 0px;
+    padding-right: 4px;
     border-top: 1px;
     border-right: 1px;
     border-left: 5px;
     border-width: 1px;
+    height: 50px;
     border-color: rgb(122, 11, 145);
     outline: none!important;
+    font-family: 'Lora', serif;
+    font-size: larger;
+    text-align: center;
+    border-radius: 8px;
 }
-
 
 .form-control:focus {
     outline: none!important;
 }
 
+.input-group {
+    padding: 0px 5px;
+    text-align: center;
+    line-height: 10px;
+}
 
+input#cities:hover {
+    font-size: 25px;
+}
 
-.btn { width:30%; text-align: center; justify-content: center; margin: 20px auto;}
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
 
-.btn-block {
-  background: linear-gradient(230deg,#03d0f946,#0a3c7e);
+button:hover {
+    background-color: black;
+    color: white;
+    font-size: 18px;
 }

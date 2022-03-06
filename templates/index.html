@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     {% load static %}
@@ -21,33 +21,50 @@
     <title>Weather_news</title>
   </head>
   
-    <body class="text-center" style="background-image: url('{% static 'images/weather_background.jpg' %}')">
-      {% comment %} <body class="text-center" style="background-image:url(https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70)"> {% endcomment %}
+    <body>
+      <div class="grid-container">
+        <div class="grid-item" id="grid-1">
+            <h2 id="heading-1"> COVID-19 updates</h2>
+            <p class="para">Keeps you updated with the current active cases in the country.</p>
+        </div>
+        <div class="grid-item" id="grid-2">
+            <h3 id="heading-2">Get Vaccinated</h3>
+            <p>" दवाई भी और कड़ाई भी "</p>
+            <hr>
+            <p><a href="https://www.aarogyasetu.gov.in/applink/" id="arogya-link">REGISTER</a></p>
+            <a href="https://www.aarogyasetu.gov.in/applink/"><img src="https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png" id="arogya"></img></a>
+        </div>
+        <div class="grid-item" id="grid-3">
+            <img src="https://i0.wp.com/www.opindia.com/wp-content/uploads/2020/04/coronavirus-india-map-17042020.jpg?resize=696%2C392&ssl=1"id="map"></img>
+            <hr>
+            <p class="para">Check cases and your local forecast <a id="login" href="#login"> > </a></p>
+        </div>
+        </div>
+
       <div class="container">
-          <div class="col-sm midb">
+      {% comment %} <body class="text-center" style="background-image:url(https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70)"> {% endcomment %}
+      <!--<div class="container" style="background-image: url('{% static 'images/weather_background.jpg' %}')">-->
+           
               <form class="form-signin" method="GET">
                   <label for="cities"></label>
-                 
+                  <div class="grid">
                     <div class="input-group">
-                      <input type="text" id="cities" name="location" class="form-control text-center" placeholder="Enter City Name" required>
-                      <div class="input-group">
-                          <button class="btn btn-outline-secondary" type="submit">Check</button>
-                      </div>
+                      <h3>Keeps you updated with the weather in your location.</h3>
+                      <hr style="height:2px">
+                      <p><input type="text" id="cities" name="location" class="form-control-text-center" placeholder="Enter City Name" required></p>
+                      <p><button class="btn-btn-outline-secondary" type="submit">Search</button></p>
+                    </div>
                   
-                  
-                      <div class="col-lg-12">
-                          <span>
-                            <h1 class="text-dark">{{ City }}</h1>
-                              <h3 class="text-dark" >{{ Temp}}</h3>
+                    <div class="col-lg-12">
+                              <h1 class="text-dark" >{{ Temp}}</h1>
+                              <h2 class="text-dark">{{ City }}</h2>
                               <h3 class="text-dark">{{ weather_condition }}</h3>
                               {% comment %} <h3 class="text-dark"align="right">{{ Pressure }}</h3>
                               <h3 class="text-dark"align="left">{{ Humidity }}</h3>
                               <h3 class="text-dark"align="right">{{ weather_condition }}</h3> {% endcomment %}
-                          </span>
-                      </div>
+                    </div>
                   </div>
               </form>
-          </div>
       </div>
       </body>
 

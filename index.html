@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    {% load static %}
+    <link href="{% static 'css/weather.css' %}" rel="stylesheet">
+
+    {% comment %} <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> {% endcomment %}
+
+    <title>Weather_news</title>
+  </head>
+  
+    <body>
+     <div class="header">
+       <header>
+         <nav class="navbar">
+          <div class="logo"><a href="#">जाgrukta</a></div>
+          <ul class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NEWSROOM</a></li>
+            <li><a href="#">ABOUT</a></li>
+           </ul>
+          <div class="buttons">
+          <input type="button" value="Login">
+          <input type="button" value="Register">
+          </div>
+         </nav>
+         <div class="text-content">
+         <div class="origin">
+          <h1>जाgrukta</h1>
+         </div> 
+          <img src="https://payload.cargocollective.com/1/19/634953/11773472/news_online_800_bravo.gif" width="350" height="300" width_o="350" height_o="300" src_o="https://payload.cargocollective.com/1/19/634953/11773472/news_online_800_bravo.gif" data-mid="63137559" border="0" align="left" data-title="1800 (800) — 800 × 450"> 
+         </div>
+         <br>
+         <marquee width="100%" direction="right" height="100px" scrollamount="10" style="font-size:20px">
+           NEWS! Just a click away...
+          </marquee>
+        </header>
+        </div>
+
+      <div class="grid-container">
+        <div class="grid-item" id="grid-1">
+            <h2 id="heading-1"> COVID-19 updates</h2>
+            <br>
+            <p class="para">Keeps you updated with the current active cases.</p>
+        </div>
+        <div class="grid-item" id="grid-2">
+            <h3 id="heading-2">Get Vaccinated</h3>
+            <br>
+            <p>" दवाई भी और कड़ाई भी "</p>
+            <br>
+            <hr>
+            <br>
+            <p><a href="https://www.aarogyasetu.gov.in/applink/" id="arogya-link">REGISTER</a></p>
+            <br>
+            <a href="https://www.aarogyasetu.gov.in/applink/"><img src="https://www.aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png" id="arogya"></img></a>
+        </div>
+        <div class="grid-item" id="grid-3">
+            <img src="https://i0.wp.com/www.opindia.com/wp-content/uploads/2020/04/coronavirus-india-map-17042020.jpg?resize=696%2C392&ssl=1"id="map"></img>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <p class="para">Check cases and your local forecast <a id="login" href="#login"> > </a></p>
+        </div>
+        </div>
+
+      <div class="container">
+      {% comment %} <body class="text-center" style="background-image:url(https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70)"> {% endcomment %}
+      <!--<div class="container" style="background-image: url('{% static 'images/weather_background.jpg' %}')">-->
+           
+              <form class="form-signin" method="GET">
+                  <label for="cities"></label>
+                  <div class="grid">
+                    <div class="input-group">
+                      <h3>Keeps you updated with the weather in your location.</h3>
+                      <br>
+                      <hr style="height:2px">
+                      <br>
+                      <p><input type="text" id="cities" name="location" class="form-control-text-center" placeholder="Enter City Name" required></p>
+                      <br>
+                      <p><button class="btn-btn-outline-secondary" type="submit">Search</button></p>
+                    </div>
+                  
+                    <div class="col-lg-12">
+                              <h1 class="text-dark" >{{ Temp}}</h1>
+                              <h2 class="text-dark">{{ City }}</h2>
+                              <h2 class="text-dark">{{ weather_condition }}</h2>
+                              {% comment %} <h3 class="text-dark"align="right">{{ Pressure }}</h3>
+                              <h3 class="text-dark"align="left">{{ Humidity }}</h3>
+                              <h3 class="text-dark"align="right">{{ weather_condition }}</h3> {% endcomment %}
+                    </div>
+                    <div>
+                      <h4>{{main}} <img id="forecast" src="http://openweathermap.org/img/w/{{icon}}.png" onerror="this.src='https://store-images.s-microsoft.com/image/apps.16894.c02476d2-2378-4f60-8290-b6d4b3842643.79a2ef6a-4775-4c79-8d93-9caf077660eb.1bbd88a4-0a17-4750-91a0-cd7d98f58e9d'" alt=""></h4>
+                    </div>
+                  </div>
+              </form>
+      </div>
+      </body>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> {% endcomment %}
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Kalam:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow-x: hidden !important;
+}
+
+div.header {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-image: url("https://blogs.canterbury.ac.uk/library/wp-content/uploads/sites/638/2021/10/background-g1831e5b61_1920-1536x864.jpg");
+    background-image: url("https://cdn.britannica.com/25/93825-050-D1300547/collection-newspapers.jpg");
+    /*background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/article_images/2020/05/19/iStock-1158786915-1207281237-1585073253.jpg?itok=yaBo7-Rf");
+    background-image: url("https://populationconnection.org/wp-content/uploads/2021/09/newspapers-1.png");
+    background-image: url("https://www.brunel.ac.uk/news-and-events/news/images/papersbig.jpg?q=70&f=webp");
+    background-image: url("https://blog.flipsnack.com/wp-content/uploads/2020/12/colorful-newspapers.jpg");
+    background-image: url("https://wbhsbullseye.com/wp-content/uploads/2019/02/newspaper.jpg");*/
+    background-image: url("https://www.halesowennews.co.uk/resources/images/12825549.jpg?type=responsive-gallery-fullscreen");
+    opacity: 1;
+}
+
+
+/*::selection {
+    color: #f2f2f2;
+    background: #f86d8d;
+}
+
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body::before {
+    clip-path: circle(20% at left 20%);
+    opacity: 0.4;
+    background-image: linear-gradient( 135deg, #ccb96c 10%, #d6c47c 100%);
+}
+
+body::after {
+    opacity: 0.4;
+    clip-path: circle(25% at right 80%);
+    background-image: linear-gradient( 135deg, #ccb96c 10%, #d6c47c 100%);
+}
+*/
+
+header {
+    height: 90vh;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.333);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 12;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+nav.navbar {
+    display: grid;
+    grid-template-columns: 20% 55% auto;
+    align-items: center;
+}
+
+header .navbar {
+    margin: auto;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.navbar .menu {
+    height: 10vh;
+    display: block;
+    overflow: hidden;
+    float: left;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #000;
+    font-weight: 500;
+}
+
+ul.menu {
+    list-style-type: none;
+    overflow: hidden;
+    display: block;
+}
+
+.navbar .menu li {
+    display: inline;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 6px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 90px;
+    line-height: 40px;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Abril Fatface', cursive;
+    background-color: rgba(255, 255, 255, 0.456);
+    padding: 0px 2px;
+    border-radius: 4px;
+}
+
+.navbar .menu a:hover {
+    font-size: 28px;
+    color: black;
+    border-bottom: 4px solid black;
+    background-color: rgba(243, 81, 81, 0.37);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-bottom: 4px solid rgb(209, 42, 42);
+    padding: 5px;
+}
+
+.navbar .buttons input {
+    outline: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 540;
+    border-radius: 12px;
+    padding: 4px 15px;
+    border: none;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(247, 247, 247, 0.226);
+    border: 1px solid white;
+}
+
+.navbar .buttons input:hover {
+    transform: scale(0.97);
+}
+
+header .text-content {
+    display: grid;
+    grid-template-columns: 50% auto;
+    margin: 80px 0 0 50px;
+}
+
+.text-content .origin {
+    margin: 10px;
+}
+
+.text-content h1 {
+    text-decoration: overline;
+    font-family: 'Eczar', 'Kalam';
+    font-size: 110px;
+    transition-duration: 0.7s;
+}
+
+.text-content h1:hover {
+    margin: 0 30px 0 100px;
+    background-color: rgb(238, 238, 66);
+}
+
+.text-content img {
+    margin-left: 180px;
+    margin-right: 35px;
+    border-radius: 250px;
+}
+
+
+/*@media (max-width:850px) {
+    header .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 5px;
+    }
+    .navbar .menu {
+        margin: 10px 0 20px 0;
+    }
+    header .text-content {
+        margin: 30px 0 0 20px;
+        width: 70%;
+    }
+    header .text-content h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:410px) {
+    header {
+        height: 100vh;
+        width: 100%;
+        border-radius: 0px;
+    }
+    header .navbar {
+        padding: 15px 10px;
+    }
+}*/
+
+.grid-container {
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 40% 30% auto;
+    grid-column-gap: 4px;
+    grid-template-rows: auto;
+    align-content: center;
+    /*background-image: url("https://besthqwallpapers.com/Temp/6-3-2022/crumpled-paper-texture-white-crumpled-paper-background-paper-texture-white-paper-crumpled-paper-besthqwallpapers.com-1024x768.jpg");
+    background-image: url("https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/ink-and-tea-stained-paper-texture-7-780x1100.jpg");*/
+    background-color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.grid-item {
+    padding: 8px;
+}
+
+p.para {
+    font-size: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#grid-1 {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+#grid-2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+#heading-2 {
+    font-size: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#heading-1 {
+    font-weight: lighter;
+    transition-duration: 0ms;
+}
+
+#heading-1:hover {
+    background-color: yellow;
+    margin-right: 140px;
+    color: red;
+    font-weight: bolder;
+}
+
+a#arogya-link {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+a#login {
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+img#map {
+    width: 300px;
+    height: 200px;
+}
+
+a#login:hover {
+    padding-left: 50px;
+    font-size: larger;
+    color: black;
+}
+
+.container {
+    background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_PartlyCloudy-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70)%22");
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    height: 55vh;
+    opacity: 0.95;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    /*background-position: center;*/
+}
+
+.grid {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 50% auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.text-dark {
+    color: black!important;
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+}
+
+input[type='text'] {
+    width: 60%;
+    background-color: white;
+    opacity: 0.85;
+    padding: 0px;
+    padding-right: 4px;
+    border-top: 1px;
+    border-right: 1px;
+    border-left: 5px;
+    border-width: 1px;
+    height: 50px;
+    border-color: rgb(122, 11, 145);
+    outline: none!important;
+    font-family: 'Lora', serif;
+    font-size: larger;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    outline: none!important;
+}
+
+.input-group {
+    padding: 0px 5px;
+    text-align: center;
+}
+
+input#cities:hover {
+    font-size: 25px;
+}
+
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+h1.text-dark {
+    font-size: 60px;
+    font-weight: 35px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.input-group h3 {
+    overflow: hidden;
+}
+
+img#forecast {
+    width: 250px;
+    height: 180px;
+    margin-top: 10px;
+    border-radius: 20px 20px;
+}

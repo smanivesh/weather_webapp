@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.wallpapersafari.com/98/82/nliZQf.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+body::before{
+    content: '';
+    width: 100%;
+    height: 182vh;
+    position: absolute;
+    background: rgba(0, 0,0,0.5);
+    z-index: -1;
+}
+
+.container{
+    width: 335px;
+    height: 450px;
+    background: rgba(255, 225,225,0.3);
+    border-top: 1px solid rgba(255, 225,225,0.5);
+    border-left: 1px solid #ffffff80;
+    border: radius 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(2px);
+}
+
+input::placeholder{
+    color: #fff;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+form{
+    width: 275px;
+    margin: 0 auto;
+}
+form input{
+    margin: 15px 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 225,225,0.1);
+    border-top: 1px solid rgba(255, 225,225,0.5);
+    border-left: 1px solid #ffffff80;
+    border-radius: 5px;
+    border-right: none;
+    border-bottom: none;
+    text-align: center;
+    color: #fff;
+}
+
+label{
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+}
+form h1{
+    color: #fff;
+    font-size: 33px;
+}
+form h5{
+    font-size: 15px;
+    margin: 10px 0 20px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
